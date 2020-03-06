@@ -1,11 +1,12 @@
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 1 \2502  Hello World\a   \2502             ^\a   \2575 \a   styles.scss 1:12  root stylesheet';
+body {
+  background-color: rgba(14, 29, 23, 0.2);
+  text-align: center;
 }
+
+nav_bar {
+  background: rgba(14, 29, 23, 0.2);
+  margin: auto;
+  height: 100px;
+  border-bottom: 1px solid linear-gradient(red, green, salmon, cyan, gray);
+}
+/*# sourceMappingURL=styles.css.map */
