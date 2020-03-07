@@ -1,0 +1,73 @@
+@media(max-width:700px){
+    //text
+   
+    //nav
+    .navbar{
+        width:100%;
+        margin:none;
+    }
+    .container{
+        width:100%;
+        padding:none;
+        margin:none;
+    }
+
+    //profiles
+    .profile{
+        width:20px;
+        height:20px
+    }
+    .first-div{
+        text-align: center;
+        
+
+        .primary-text{
+        font-size:0.8rem;
+        padding:none;
+        text-align:center;
+        margin-bottom:2px;
+        }
+    #word{
+        font-size:0.2rem;
+    }
+    }
+    .second-div{
+        padding: -0.8rem;
+        text-align: end;
+        justify-content: end;
+        justify-items: end;
+    }
+    .profit{
+        display:none;
+    }
+    .about-exp { grid-area: about-exp; }
+    .about-edu{ grid-area: about-edu; }
+    .about-container{
+        display: grid;
+        grid-template-areas: 'about-exp about-exp' 'about-edu about-edu';
+        width:100%;
+        margin:none;
+    }
+    .about-exp{
+     width:100%;
+     padding: none;
+    float:left
+    }
+    .header-sub-title{
+        font-size: 0.2rem;
+        box-sizing: border-box;
+        display:none;
+
+    }
+    .about-edu,.about-exp{
+        width:100%;
+    }
+    .primary-text-titles{
+        
+        display:none;
+    }
+    .same{
+        width:100%;
+        float:left;
+    }
+}
