@@ -159,7 +159,10 @@
 }
 
 @media (max-width: 700px) {
-  .navbar {
+  body {
+    width: 100%;
+  }
+  .nav-bar {
     width: 100%;
     margin: none;
   }
@@ -167,10 +170,18 @@
     width: 100%;
     padding: none;
     margin: none;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
-  .profile {
-    width: 20px;
-    height: 20px;
+  .about-container {
+    width: 100vh;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    padding: none;
+    margin: none;
+  }
+  .primary-text, .primary-text2 {
+    font-size: 0.8rem;
   }
   .first-div {
     text-align: center;
@@ -213,6 +224,7 @@
         grid-template-areas: 'about-exp about-exp' 'about-edu about-edu';
     width: 100%;
     margin: none;
+    padding: none;
   }
   .about-exp {
     width: 100%;
@@ -223,13 +235,9 @@
     font-size: 0.2rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    display: none;
   }
   .about-edu, .about-exp {
     width: 100%;
-  }
-  .primary-text-titles {
-    display: none;
   }
   .same {
     width: 100%;

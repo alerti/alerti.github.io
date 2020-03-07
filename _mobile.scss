@@ -1,8 +1,10 @@
 @media(max-width:700px){
     //text
-   
+   body{
+       width:100%;
+   }
     //nav
-    .navbar{
+    .nav-bar{
         width:100%;
         margin:none;
     }
@@ -10,13 +12,19 @@
         width:100%;
         padding:none;
         margin:none;
+        grid-template-columns: 1fr;
+    }
+    .about-container{
+        width:100vh;
+        grid-template-rows:1fr;
+        padding: none;
+        margin: none;
+    }
+    .primary-text,.primary-text2{
+        font-size: 0.8rem;
     }
 
     //profiles
-    .profile{
-        width:20px;
-        height:20px
-    }
     .first-div{
         text-align: center;
         
@@ -47,6 +55,7 @@
         grid-template-areas: 'about-exp about-exp' 'about-edu about-edu';
         width:100%;
         margin:none;
+        padding: none;
     }
     .about-exp{
      width:100%;
@@ -56,15 +65,14 @@
     .header-sub-title{
         font-size: 0.2rem;
         box-sizing: border-box;
-        display:none;
+        
 
     }
     .about-edu,.about-exp{
         width:100%;
     }
     .primary-text-titles{
-        
-        display:none;
+       
     }
     .same{
         width:100%;
