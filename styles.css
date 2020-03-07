@@ -222,22 +222,23 @@ body {
   font: "Spartan", sans-serif;
   font-weight: bolder;
   color: navy;
+  font-size: 1.2rem;
+  padding: 0.8rem;
 }
 
 .primary-text {
   font-weight: 900;
-  padding: 0,08rem 0,08rem 0,08rem 0,08rem;
+  font-size: 1.1rem;
   color: rgba(0, 0, 0, 0.5);
   font-family: "Spartan", sans-serif;
 }
 
 .primary-text-titles {
   font-weight: 900;
-  padding: 0,08rem 0,08rem 0,08rem 0,08rem;
   color: green;
   font-family: "Spartan", sans-serif;
-  font-stretch: semi-expanded;
-  text-decoration: underline;
+  background: -webkit-gradient(linear, left top, right top, from(snow), color-stop(snow), color-stop(white), color-stop(snow), to(lightcyan));
+  background: linear-gradient(to right, snow, snow, white, snow, lightcyan);
 }
 
 .primary-text2 {
@@ -257,17 +258,19 @@ body {
 .footer-text {
   font-weight: 900;
   font-size: 0.6rem;
-  color: whitesmoke;
+  color: grey;
   font-family: "Spartan", sans-serif;
 }
 
 .footer-text a {
   text-decoration: none;
+  color: grey;
+  font: "Spartan", sans-serif;
 }
 
 .cert {
-  background: -webkit-gradient(linear, left top, right top, from(snow), color-stop(snow), color-stop(white), color-stop(snow), to(cyan));
-  background: linear-gradient(to right, snow, snow, white, snow, cyan);
+  background: -webkit-gradient(linear, left top, right top, from(snow), color-stop(snow), color-stop(white), color-stop(snow), to(lightcyan));
+  background: linear-gradient(to right, snow, snow, white, snow, lightcyan);
   width: 5rem;
   height: 1rem;
   border: none;
@@ -286,8 +289,8 @@ body {
 }
 
 .nav-bar {
-  background: -webkit-gradient(linear, left top, right top, from(snow), color-stop(snow), color-stop(white), color-stop(snow), to(cyan));
-  background: linear-gradient(to right, snow, snow, white, snow, cyan);
+  background: -webkit-gradient(linear, left top, right top, from(snow), color-stop(snow), color-stop(white), color-stop(snow), to(lightcyan));
+  background: linear-gradient(to right, snow, snow, white, snow, lightcyan);
   width: 90%;
   top: 0;
   margin: auto;
@@ -442,19 +445,36 @@ p > a {
   margin: auto;
 }
 
+.same:hover {
+  z-index: 1;
+  padding: 1px;
+  -webkit-box-shadow: 0px 0px  10px  lightgray;
+          box-shadow: 0px 0px  10px  lightgray;
+  margin: 2px;
+  border: none;
+}
+
+.same:hover.primary-text {
+  font: 1.3rem;
+}
+
+.same:first-child {
+  background: -webkit-gradient(linear, left top, right top, from(snow), color-stop(snow), color-stop(white), color-stop(snow), to(lightcyan));
+  background: linear-gradient(to right, snow, snow, white, snow, lightcyan);
+}
+
 .about-exp, .about-edu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .about-edu > div, .about-exp > div {
   z-index: 999px;
-  border-bottom: 1px dashed gray;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -471,8 +491,8 @@ p > a {
 
 .primary-text2 .tooltiptext {
   visibility: hidden;
-  background-color: black;
-  color: #fff;
+  background-color: inherit;
+  color: #000;
   text-align: center;
   border-radius: 6px;
   font-size: 8px;
@@ -564,5 +584,12 @@ p > a {
   color: green;
   padding: 10px;
   font-size: 0.8rem;
+}
+
+.footer:hover .footer-text, .footer:hover .footer-text a {
+  font-size: 0.6rem;
+  color: snow;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 /*# sourceMappingURL=styles.css.map */

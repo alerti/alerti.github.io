@@ -4,7 +4,7 @@
 @import 'mobile';
 
 $fonts:helvetica,sanserif;
-$primary-color:linear-gradient(to right,snow,snow,white,snow,cyan);
+$primary-color:linear-gradient(to right,snow,snow,white,snow,lightcyan);
 $button-color:lightblue;
 $danger-color:lime;
 $success-color:green;
@@ -23,20 +23,20 @@ body{
   font:$font;
   font-weight: bolder;
   color:navy;
+  font-size: 1.2rem;
+  padding: 0.8rem;
 }
 .primary-text{
     font-weight: 900;
-    padding:0,08rem 0,08rem 0,08rem 0,08rem;
+    font-size: 1.1rem;
     color:$mainfont;
     font-family:$font;
 }
 .primary-text-titles{
   font-weight: 900;
-  padding:0,08rem 0,08rem 0,08rem 0,08rem;
   color:green;
   font-family:$font;
-  font-stretch:semi-expanded;
-  text-decoration: underline;
+  background: $primary-color;
 }
 .primary-text2{
     font-weight: 900;
@@ -53,10 +53,12 @@ body{
 .footer-text{
   font-weight: 900;
   font-size:0.6rem;
-  color:whitesmoke;
+  color:grey;
   font-family:$font;
   a{
     text-decoration: none;
+    color: grey;
+    font:$font;
   }
 }
 .cert{
@@ -184,13 +186,25 @@ p>a {
   width:100%;
   margin: auto;
 }
+.same:hover{
+  z-index:1;
+  padding: 1px;
+  box-shadow: 0px 0px  10px  lightgray;
+  margin:2px;
+  border:none;
+  &.primary-text{
+    font: 1.3rem;
+  }
+}
+.same:first-child{
+  background: $primary-color;
+}
 .about-exp,.about-edu{
   display:flex;
-  flex-direction:column-reverse;
+  flex-direction:column;
 }
 .about-edu > div,.about-exp > div{
   z-index:999px;
-  border-bottom:1px dashed gray;
   justify-content: space-between;
 }
 .about-edu > p,.about-exp > p{
@@ -202,8 +216,8 @@ p>a {
 }
 .primary-text2 .tooltiptext {
   visibility: hidden;
-  background-color: black;
-  color: #fff;
+  background-color: inherit;
+  color: #000;
   text-align: center;
   border-radius: 6px;
   font-size:8px;
@@ -278,5 +292,12 @@ p>a {
   color:green;
   padding: 10px;
   font-size: 0.8rem;
+}
+.footer:hover{
+  .footer-text,.footer-text a{
+    font-size:0.6rem;
+    color: snow;
+    transition: 0.5s ease-in-out;
+  }
 }
 
