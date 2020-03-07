@@ -158,27 +158,17 @@
   padding: 5rem 0;
 }
 
-@media (max-width: 700px) {
-  body {
-    width: 100%;
-  }
+@media only screen and (max-width: 700px) {
   .nav-bar {
     width: 100%;
     margin: none;
   }
   .container {
     width: 100%;
-    padding: none;
+    padding: 2px;
     margin: none;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .about-container {
-    width: 100vh;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    padding: none;
-    margin: none;
+    -ms-grid-columns: 'about' 'about';
+        grid-template-columns: 'about' 'about';
   }
   .primary-text, .primary-text2 {
     font-size: 0.8rem;
@@ -206,49 +196,26 @@
   .profit {
     display: none;
   }
-  .about-exp {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: about-exp;
-  }
-  .about-edu {
-    -ms-grid-row: 1;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 3;
-    grid-area: about-edu;
-  }
   .about-container {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'about-exp about-exp' 'about-edu about-edu';
-    width: 100%;
-    margin: none;
-    padding: none;
+        grid-template-areas: 1fr;
+    width: 90%;
+    background: #fff;
+    margin-right: 5%;
+    margin-left: 5%;
+    grid-gap: 1px;
+    text-align: center;
+    padding: 30px;
   }
-  .about-exp {
-    width: 100%;
-    padding: none;
-    float: left;
-  }
-  .header-sub-title {
-    font-size: 0.2rem;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .about-edu, .about-exp {
-    width: 100%;
-  }
-  .same {
-    width: 100%;
-    float: left;
+  .about-container :last-child {
+    border-bottom: none;
   }
 }
 
 body {
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(snow), color-stop(snow), color-stop(white), color-stop(snow), color-stop(snow), color-stop(snow), to(lightcyan));
-  background: linear-gradient(to right, snow, snow, white, snow, snow, snow, lightcyan);
+  background: snow;
 }
 
 .title-text {
@@ -269,6 +236,8 @@ body {
   padding: 0,08rem 0,08rem 0,08rem 0,08rem;
   color: green;
   font-family: "Spartan", sans-serif;
+  font-stretch: semi-expanded;
+  text-decoration: underline;
 }
 
 .primary-text2 {
@@ -326,13 +295,14 @@ body {
 
 .container {
   width: 90%;
-  height: 50vh;
+  height: 60vh;
   margin: auto;
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'first-div first-div first-div first-div first-div first-div' 'second-div second-div second-div second-div second-div second-div' 'third-div third-div third-div third-div third-div third-div';
   grid-gap: 2px;
-  background: rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, left top, right top, from(gainsboro), color-stop(snow), color-stop(snow), color-stop(white), color-stop(snow), color-stop(snow), color-stop(snow), to(gainsboro));
+  background: linear-gradient(to right, gainsboro, snow, snow, white, snow, snow, snow, gainsboro);
   font: "Spartan", sans-serif;
 }
 
@@ -454,10 +424,10 @@ p > a {
 .about-container {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'about-exp about-exp about-exp about-edu about-edu about-edu';
+      grid-template-areas: 'about';
   width: 90%;
+  background: #fff;
   margin: auto;
-  grid-auto-flow: false;
   grid-gap: 1px;
   text-align: center;
   padding: 30px;
@@ -465,6 +435,21 @@ p > a {
 
 .about-container :last-child {
   border-bottom: none;
+}
+
+.about {
+  width: 100%;
+  margin: auto;
+}
+
+.about-exp, .about-edu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .about-edu > div, .about-exp > div {
@@ -478,6 +463,10 @@ p > a {
 .about-edu > p, .about-exp > p {
   font-size: 0.4rem;
   color: green;
+}
+
+.about-edu > div:first-child, .about-exp > div:first-child {
+  border-bottom: none;
 }
 
 .primary-text2 .tooltiptext {
@@ -557,7 +546,7 @@ p > a {
   display: grid;
   grid-gap: 1px;
   height: 50vh;
-      grid-template-areas: 'footer-div1 footer-div1' 'footer-div2 footer-div2 ';
+      grid-template-areas: 'footer-div1 footer-div1' 'footer-div2 footer-div2';
 }
 
 .footer-div1, .footer-div2, .footer-div3 {

@@ -1,8 +1,6 @@
-@media(max-width:700px){
+@media only screen and (max-width: 700px){
     //text
-   body{
-       width:100%;
-   }
+  
     //nav
     .nav-bar{
         width:100%;
@@ -10,15 +8,9 @@
     }
     .container{
         width:100%;
-        padding:none;
+        padding:2px;
         margin:none;
-        grid-template-columns: 1fr;
-    }
-    .about-container{
-        width:100vh;
-        grid-template-rows:1fr;
-        padding: none;
-        margin: none;
+        grid-template-columns: 'about' 'about';
     }
     .primary-text,.primary-text2{
         font-size: 0.8rem;
@@ -48,34 +40,18 @@
     .profit{
         display:none;
     }
-    .about-exp { grid-area: about-exp; }
-    .about-edu{ grid-area: about-edu; }
     .about-container{
-        display: grid;
-        grid-template-areas: 'about-exp about-exp' 'about-edu about-edu';
-        width:100%;
-        margin:none;
-        padding: none;
-    }
-    .about-exp{
-     width:100%;
-     padding: none;
-    float:left
-    }
-    .header-sub-title{
-        font-size: 0.2rem;
-        box-sizing: border-box;
-        
-
-    }
-    .about-edu,.about-exp{
-        width:100%;
-    }
-    .primary-text-titles{
-       
-    }
-    .same{
-        width:100%;
-        float:left;
-    }
+  display:grid;
+  grid-template-areas:1fr;
+  width:90%;
+  background: #fff;
+  margin-right:5%;
+  margin-left:5%;
+  grid-gap:1px;
+  text-align: center;
+  padding: 30px;
+  :last-child{
+    border-bottom: none;
+  }
+}
 }

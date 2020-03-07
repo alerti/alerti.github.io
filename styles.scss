@@ -13,10 +13,11 @@ $container:rgba(0,0,13,0.5);
 $primary-text:rgba(100,100,100,0.7);
 $mainfont:rgba(0,0,0,0.5);
 $font:'Spartan', sans-serif;
+$backgroun-default:linear-gradient(to right,gainsboro,snow,snow,white,snow,snow,snow,gainsboro);
 
 body{
     text-align: center;
-    background:linear-gradient(to right,snow,snow,white,snow,snow,snow,lightcyan);
+    background:snow;
 }
 .title-text{
   font:$font;
@@ -34,6 +35,8 @@ body{
   padding:0,08rem 0,08rem 0,08rem 0,08rem;
   color:green;
   font-family:$font;
+  font-stretch:semi-expanded;
+  text-decoration: underline;
 }
 .primary-text2{
     font-weight: 900;
@@ -79,7 +82,7 @@ body{
 }
 .container{
     width:90%;
-    height:50vh;
+    height:60vh;
     margin:auto;
     display:grid;
     grid-template-areas:
@@ -87,7 +90,7 @@ body{
     'second-div second-div second-div second-div second-div second-div'
     'third-div third-div third-div third-div third-div third-div';
     grid-gap:2px;
-    background:rgba(0,0,0, 0.1);
+    background:$backgroun-default;
     font:$font;
 
     .first-div{
@@ -166,16 +169,24 @@ p>a {
 }
 .about-container{
   display:grid;
-  grid-template-areas: 'about-exp about-exp about-exp about-edu about-edu about-edu';
+  grid-template-areas:'about';
   width:90%;
+  background: #fff;
   margin:auto;
-  grid-auto-flow: false;
   grid-gap:1px;
   text-align: center;
   padding: 30px;
   :last-child{
     border-bottom: none;
   }
+}
+.about{
+  width:100%;
+  margin: auto;
+}
+.about-exp,.about-edu{
+  display:flex;
+  flex-direction:column-reverse;
 }
 .about-edu > div,.about-exp > div{
   z-index:999px;
@@ -185,6 +196,9 @@ p>a {
 .about-edu > p,.about-exp > p{
   font-size:0.4rem;
   color:green;
+}
+.about-edu >div:first-child,.about-exp > div:first-child{
+  border-bottom: none;
 }
 .primary-text2 .tooltiptext {
   visibility: hidden;
@@ -251,7 +265,7 @@ p>a {
   display: grid;
   grid-gap:1px;
   height:50vh;
-  grid-template-areas: 'footer-div1 footer-div1' 'footer-div2 footer-div2 ';
+  grid-template-areas: 'footer-div1 footer-div1' 'footer-div2 footer-div2';
 }
 .footer-div1,.footer-div2,.footer-div3{
   border-bottom:1px solid gainsboro;
